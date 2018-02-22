@@ -236,8 +236,9 @@ def construct_path(filename):
     if verbose:
         print("filename: %s" % filename)
 
-    filename = os.path.basename(filename)
-
+    # filename = os.path.basename(filename)
+    filename = download_dir +  os.path.splitext(filename)[1]
+    
     if verbose:
         print("basename: %s" % filename)
 
